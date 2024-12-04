@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //incio do codigo 
+        let modeloMoto = 0
+        let pop = 0
+        let biz = 0
+        let plano = 0
+        let pop48 = 0
+        let pop80 = 0
+        let biz48 = 0
+        let biz80 = 0
+        
+        console.log('***PRIMEIRA QUESTAO***')//usei prompt porque se nao o codigo ficaria muito pequeno 
+        //estrutura de repetiçao para armazenar os resultados
+        do{
+            modeloMoto = parseInt(prompt('Digite 1 se deseja comprar a Pop ou 2 se quiser a biz, ou 0 se deseja finalizar compra: '))
+            if (modeloMoto === 1){
+                pop++ 
+                plano = parseInt(prompt('Digite 1 se deseja realizar o plano de 48x de 288.76, ou 2 se quiser realizar o plano de 80x de 181.00: '))
+                if (plano === 1){
+                    pop48++ 
+                }else if (plano === 2){
+                    pop80++
+                }else{ 
+                    alert('Digite 1 ou 2.')
+                }
+            }else if (modeloMoto === 2){
+                biz++
+                plano = parseInt(prompt('Digite 1 se deseja realizar o plano de 48x de 357.53, ou 2 se quiser realizar o plano de 80x de 224.11: '))
+                if (plano === 1){
+                    biz48++
+                }else if (plano === 2){
+                    biz80++
+                }else{
+                    alert('Digite 1 ou 2.')
+                }
+            }
+            
+        }while (modeloMoto != 0)
+
+        //mostrando resultados no console
+        console.log(`foram vendidas ${pop} motos do modelo Pop. ${pop48} vendas foram no plano de 48x e ${pop80} vendas foram no plano de 80x`)
+        console.log(`foram vendidas ${biz} motos do modelo Biz. ${biz48} vendas foram no plano de 48x e ${biz80} vendas foram no plano de 80x`)
+
+
+    </script>
+</body>
+</html>

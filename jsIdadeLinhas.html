@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+//le numero indeterminado de linhas, contendo as idades
+//verificar se idade é igual a zero, se for aí vira a ultima linha
+//calcular e escrever a media das idades
+
+let idades = []
+let i = 0
+let idade 
+let somaIdades= 0
+let mediaIdades = 0
+
+do {
+	idade = parseInt(prompt('Informe a idade: '))
+	if (idade != 0){
+		idades[i] = idade
+	}
+	i++
+	somaIdades += idade
+} while (idade != 0) 
+
+mediaIdades = somaIdades / idades.length
+
+console.log(mediaIdades)
+console.log(idades)
+</script>
+</body>
+</html>
+

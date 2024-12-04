@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	/*console.log('*****DIAS DA SEMANA*****')
+	let diaDasemana = parseInt(prompt('Digite 1, 2, 3, 4, 5, 6 ou 7 para o respectivo dia da semana: '))
+	switch(diaDasemana){
+		case 1:
+			console.log('domingo')
+			break
+		case 2:
+			console.log('segunda')
+			break
+		case 3:
+			console.log('terça')
+			break
+		case 4:
+			console.log('quarta')
+			break
+		case 5:
+			console.log('quninta')
+			break	
+		case 6:
+			console.log('sexta')
+			break
+		case 7:
+			console.log('sabado')
+			break
+		default:
+			console.log('informe apenas os numeros sugeridos.')				
+	}
+	console.log('*****VERIFICÇAO SE NUM É POSITIVO, NEGATIVO OU NULO*****')
+	let numero = parseInt(prompt('Informe qualquer numero para verificação: '))
+	if (numero < 0){
+		console.log('Numero negativo.')
+	}else if (numero > 0){
+		console.log('Numero positivo.')
+	}else{
+		console.log('Numero nulo.')
+	}
+
+	console.log('*****TURNO*****')
+	let turno = prompt('informe o seu turno. Digite M para matutino, V para vespertino e N para noturno: ')
+	if (turno == 'M'){
+	
+		console.log('Bom dia!')
+	}else if (turno == 'V'){
+		console.log('Boa tarde!')
+	}else if (turno == 'N'){
+		console.log('Boa noite!')
+	}else{
+		console.log('Digite apenas M, V ou N: ')
+	}
+
+	console.log('*****CONFIRMAÇAO DE SENHA*****')
+	let senha = prompt('Informe sua senha: ')
+	let confirmarSenha = prompt('Digite novamente para confirmação: ')
+	if (senha == confirmarSenha){
+		console.log('confirmação de senha autorizada.')
+	}else{
+		console.log('Senha invalida.')
+	}
+
+	console.log('*****DADOS CONTA BANCARIA*****')
+	let valorExistenteDaConta = parseInt(prompt('informe o valor existente da conta: '))
+	let tipoDeOperacao = parseInt(prompt('digite 1 para saque e 2 para deposito: '))
+	let valorDaOperacao = parseInt(prompt('Informe o valor da operação: '))
+	let saldoAtulizado = 0
+
+	if (tipoDeOperacao === 1){
+		saldoAtulizado = valorExistenteDaConta - valorDaOperacao
+		console.log(`esse é o valor atualizado da conta ${saldoAtulizado}`)
+		if (valorDaOperacao > valorExistenteDaConta){
+			console.log('conta estourada')
+		}
+	}else if (tipoDeOperacao === 2){
+		saldoAtulizado = valorExistenteDaConta + valorDaOperacao
+		console.log(`esse é o valor atualizado da conta ${saldoAtulizado}`)
+	}
+	else{
+		console.log('verifique se a opercao esta correta')
+	}
+
+	for (let i = 10; i < 30; i = 2){
+         console.log(i)
+	}
+
+	let maiornumero = 0
+	let menornumero = 0
+	let aux = 0
+	
+	for (let numero = 0; numero < 5; numero++){
+		parseInt(prompt("Digite cinco número"))
+		aux += numero
+		if (numero < aux){
+			maiornumero += numero + 1
+		}else{
+			menornumero += numero +1
+		}
+	}
+	console.log(maiornumero)
+	console.log(menornumero)*/
+
+	/*(Questão de prova) Um hotel cobra R$120,00 a diária e mais uma taxa de serviços. A taxa de serviços é de:
+■ R$5.50 por diária, se o número de diárias for maior que 15.
+■ R$6.00 por diária, se o número de diárias for igual a 15.
+■ R$8.00 por diária, se o número de diárias for menor que 15.
+Construa um algoritmo que mostre o nome e o total da conta de um cliente.
+
+	let diaria = 120.00
+	let diariaMaior = 0
+	let diariaIgual = 0
+	let diariaMenor = 0
+	let diaHospedado = parseInt(prompt('Informe o total de dias q ficou hospedado: '))
+
+	if (diaHospedado > 15){
+		diariaMaior = (120 * diaHospedado) + (5.50 * diaHospedado)
+		console.log(diariaMaior)
+	}else if (diaHospedado === 15){
+		diariaIgual = (120 * diaHospedado) + (6.0 * diaHospedado)
+		console.log(diariaIgual)
+	}else{
+		diariaMenor = (120 * diaHospedado) + (8.0 * diaHospedado)
+		console.log(diariaMenor)
+	}
+	
+
+	let totalIdades = 0
+	let mediaIdades = 0
+	let somaIdades = 0
+	let idade21oumais = 0
+	let continuar = true
+
+	do{
+		let idade = parseInt(prompt('Informe a idade: '))
+		if (!isNaN(idade) && idade >= 0){
+			totalIdades++
+			somaIdades += idade
+
+			if (idade >= 21){
+				idade21oumais++
+			}
+		}else{
+			alert('digite uma idade valida')
+		}
+		continuar = confirm('deseja informar outra idade? ')
+	}while (continuar)
+
+	mediaIdades = somaIdades / totalIdades
+
+	alert(`totalIdades ${totalIdades}`)
+	alert(`somaIdades ${somaIdades}`)
+	alert(`idade21oumais ${idade21oumais}`)
+	alert(`mediaIdades ${mediaIdades}`)*/
+
+	/*Deseja-se fazer um levantamento a respeito da ausência de alunos na disciplina de Lógica de Programação
+	que possui 60 horas de carga horária. A turma possui 8 alunos e você deve ler a quantidade de faltas do
+	mesmo no período e calcular e informar se o alunos está reprovado por falta ou não. Lembrando que o
+	alunos pode ter no máximo 25% de falta para ser aprovado..*/
+
+	for (let i = 0; i < 8; i++){
+		let quantFaltas = parseInt(prompt('Informe a quantidade de faltas (horas) de cada aluno: '))
+		if(quantFaltas > 15){
+			alert('Aluno reprovado')
+		}else{
+			alert('Aluno aprovado')
+		}
+	}
+
+
+
+</script>
+</body>
+</html>

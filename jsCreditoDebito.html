@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	let contagem1 = 0 
+	let contagem2 = 0
+	let tipoDepagamento = 0
+	while (tipoDepagamento != -1){
+		tipoDepagamento = parseInt(prompt('Digite 1 para debito e 2 para credito ou digite -1 pra sair: '))
+		if (tipoDepagamento == -1){
+			continue
+		}
+		let valorConta = parseInt(prompt('digite o valor: '))
+		if (tipoDepagamento == 1){
+			contagem1 += 1
+			let calculodeb = (valorConta * 0.014) + valorConta
+		}
+		else if (tipoDepagamento == 2){
+			contagem2 += 1
+			let calculocred = (valorConta * 0.0374) + valorConta
+		}
+
+	}
+
+
+	console.log(contagem1)
+	console.log(contagem2)
+
+
+</script>
+</body>
+</html>

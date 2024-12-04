@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//inicio dp codigo
+const salarioMinimo = 1412
+const diasUteis = 22
+const valorHora = salarioMinimo / (diasUteis * 12)// 12 horas de trabalho
+
+//funcionarios
+let funcionarios = [
+  { matricula: 1, nome: 'Samuel', horasTrabalhadas: 160 },
+  { matricula: 2, nome: 'Lidiane', horasTrabalhadas: 180 }, 
+  { matricula: 3, nome: 'Gilberto', horasTrabalhadas: 140 } 
+]
+
+//calcular pagamento do funcionario
+for (let i = 0; i < funcionarios.length; i++) {
+  let pagamento = funcionarios[i].horasTrabalhadas * valorHora
+  //mostrando resultados no console
+  console.log(`funcionário: ${funcionarios[i].nome}, matrícula: ${funcionarios[i].matricula}, Horas trabalhadas: ${funcionarios[i].horasTrabalhadas}`)
+  console.log(`valor a receber: R$ ${pagamento.toFixed(2)}`)
+}
+    </script>
+</body>
+</html>

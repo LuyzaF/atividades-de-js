@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+// Faça um algoritmo que leia a nota de 10 alunos de uma turma e ao final, mostre:
+// a) Qual é a média da turma - OK
+// b) Quantos alunos estão acima da média da turma - OK
+// c) Qual foi a maior nota digitada - OK
+// d) Em que posições a maior nota aparece - OK
+// Observação: Considere média 7.
+
+    let notas = []
+    let totalNotas = 0
+    let mediaTurma
+    let contagemAlunosAcimaMedia = 0
+    let maiorNota = 0
+
+    for (let i = 0; i < 10; i++) {
+      let nota = parseFloat(prompt("Informe sua nota: "))
+      notas[i] = nota
+      totalNotas += nota
+
+      if (nota >= 7) {
+        contagemAlunosAcimaMedia++
+      }
+
+      if (i > 0) {
+        if (nota > maiorNota) {
+          maiorNota = nota
+        }
+      } else {
+        maiorNota = nota
+      }
+    }
+
+    mediaTurma = totalNotas / 10
+
+    alert(`A média da turma é igual a ${mediaTurma}`)
+    alert(`${contagemAlunosAcimaMedia} alunos ficaram acima da média`)
+    alert(`A maior nota foi ${maiorNota}`)
+
+    for (let i = 0; i < 10; i++) {
+      if (notas[i] == maiorNota) {
+        alert(`A maior nota aparece na posiçao ${i}`)
+      }
+    }
+  </script>
+</body>
+</html>

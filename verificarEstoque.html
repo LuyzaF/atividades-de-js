@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		//criar uma classe Produto 
+		class Produto {
+		   constructor(codigo, nome, valor, estoque, estoqueMinimo) {
+		       this.codigo = codigo
+		       this.nome = nome
+		       this.valor = valor
+		       this.estoque = 0
+		       this.estoqueMinimo = estoqueMinimo
+		    }
+		}
+
+		//criar um vetor que armazena objetos 
+		let produtos = []
+
+		const codigoTinta = new Produto('12', 'Tinta', 40, 0, 10)
+		
+		const codigoMassa = new Produto('1234', 'Massa', 25, 0, 8)
+		
+		const codigoTiner = new Produto('123456', 'Tiner', 18, 0, 6)
+
+		produtos.push(codigoTinta)
+		produtos.push(codigoMassa)
+		produtos.push(codigoTiner)
+
+		//Criar uma função pra imprimir os produtos
+		function listarProdutos(produtos) {
+		    if (produtos.length === 0) {
+		        console.log("Nenhum produto cadastrado")
+		    }else {
+		        produtos.forEach(produto => {
+		            console.log(`Código: ${produto.codigo}, Nome: ${produto.nome}, Valor: ${produto.valor}, Estoque: ${produto.estoque}, Estoque Mínimo: ${produto.estoqueMinimo}`)
+		        })
+		    }
+		}
+
+		//criar uma função que pesquise a existência ou não dos produtos
+		function pesquisarProduto(produtos, codigo) {
+		    return produtos.find(produto => produto.codigo === codigo) || null
+		}
+
+		//criar uma função de venda de produtos que modifique o estoque
+		function venderProduto(produtos, codigo, quantidade) {
+		    let produto = pesquisarProduto(produtos, codigo)
+		    if (produto) {
+		        if (produto.estoque >= quantidade) {
+		            produto.estoque -= quantidade
+		            console.log(`Venda realizada. Estoque atualizado: ${produto.estoque}`)
+		        }else {
+		            console.log("Estoque insuficiente para realizar a venda")
+		        }
+		    }else {
+		        console.log("Produto não encontrado")
+		    }
+		}
+
+		//criar uma função de entrada de produtos que modifique o estoque
+		function entradaProduto(produtos, codigo, quantidade) {
+		    let produto = pesquisarProduto(produtos, codigo)
+		    if (produto) {
+		        produto.estoque += quantidade
+		        console.log(`Entrada realizada. Estoque atualizado: ${produto.estoque}`)
+		    }else {
+		        console.log("Produto não encontrado.")
+		    }
+		}
+
+		//criar uma função que analise a quantidade de produtos em estoque
+		function verificarEstoque(produtos) {
+		    produtos.forEach(produto => {
+		        if (produto.estoque < produto.estoqueMinimo) {
+		            console.log(`Atenção: O produto ${produto.nome} está abaixo do estoque mínimo. Realizar compra!`)
+		        }
+		    })
+		}
+		
+		entradaProduto(produtos, "001", 10)
+		entradaProduto(produtos, "1234", 10)
+		listarProdutos(produtos)
+		venderProduto(produtos, "001", 10)
+		listarProdutos(produtos)
+		venderProduto(produtos, "1234", 10)
+		listarProdutos(produtos, "1234", 10)
+		verificarEstoque(produtos)
+			        
+			</script>
+	</body>
+</html>
